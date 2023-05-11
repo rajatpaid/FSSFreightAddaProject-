@@ -25,11 +25,7 @@
     <artifactId>json-simple</artifactId>
     <version>1.1.1</version>
 </dependency>
-<dependency>         
-      <groupId>net.masterthought</groupId>        
-      <artifactId>cucumber-reporting</artifactId>                     
-      <version>5.6.1</version>      
-</dependency>
+
 <dependency>
     <groupId>com.jayway.jsonpath</groupId>
     <artifactId>json-path</artifactId>
@@ -105,32 +101,7 @@
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
-        <plugin>
-   <groupId>net.masterthought</groupId>
-   <artifactId>maven-cucumber-reporting</artifactId>
-   <version>5.6.0</version>
-   <executions>
-     <execution>
-	<id>execution</id>
-	<phase>verify</phase>
-	<goals>
-	    <goal>generate</goal>
-	</goals>
-	<configuration>		
-	<projectName>cucumberReporting</projectName>    
-        <skip>false</skip>		
-        <outputDirectory>${project.build.directory}</outputDirectory>	     
-        <inputDirectory>${project.build.directory}</inputDirectory>
-        <jsonFiles>
-          <param>**/*.json</param>
-        </jsonFiles>	
-        <mergeFeaturesById>false</mergeFeaturesById>
-        <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
-        <checkBuildResult>false</checkBuildResult>		    			  
-        </configuration>
-   </execution>
-  </executions>
-</plugin>
+        
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
